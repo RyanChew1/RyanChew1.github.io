@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "../styles/globals.css";
 import SkillCard from "@/components/SkillCard";
 import ExperienceCard from "@/components/ExeprienceCard";
 import Navbar from "@/components/Navbar";
