@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ArrowLeft } from "lucide-react";
+import Head from 'next/head'
 
 const ProjectPage = () => {
   const router = useRouter();
@@ -27,6 +28,9 @@ const ProjectPage = () => {
 
   return (
     <>
+    <Head>
+        <title>Ryan Chew Portfolio</title>
+      </Head>
       <Navbar />
       <div className="container mx-auto px-4 py-6">
         <button

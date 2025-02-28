@@ -4,9 +4,11 @@ import ExperienceCard from "@/components/ExeprienceCard";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import { ContactSection } from "@/components/ContactSection";
+import Head from 'next/head'
 
 
 export default function Home() {
+
   const experiences = [
     {
       title: "Lead Web Developer",
@@ -178,6 +180,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+        <Head>
+        <title>Ryan Chew Portfolio</title>
+      </Head>
       <Navbar />
 
       {/* Hero */}
