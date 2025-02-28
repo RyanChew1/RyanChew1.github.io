@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "../styles/globals.css";
 import SkillCard from "@/components/SkillCard";
 import ExperienceCard from "@/components/ExeprienceCard";
@@ -8,7 +7,6 @@ import { ContactSection } from "@/components/ContactSection";
 
 const { library } = require("@fortawesome/fontawesome-svg-core");
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(fas)
 
