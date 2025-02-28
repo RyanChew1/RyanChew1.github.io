@@ -16,11 +16,11 @@ const SkillCard: React.FC<Skill> = ({ className, viewBox, icon, title, items }) 
         <div className="relative h-full w-full transition-all duration-500 ease-in-out transform-style-preserve-3d group-hover:[transform:rotateY(180deg)]">
           {/* Front Side */}
           <div className="w-full absolute inset-0 bg-green-300 opacity-[0.8] p-6 rounded-lg shadow-lg flex flex-col backface-hidden [transform:rotateY(0deg)]">
-            <h3 className="text-2xl font-bold mb-2">{title}</h3>
+            <h3 className="text-2xl font-bold mb-3">{title}</h3>
             <div
               className="flex flex-col h-full w-fit self-center text-center items-center justify-center"
               ref={(el) => {
-                if (el) el.style.fontSize = `${el.clientHeight * 0.6}px`;
+                if (el) el.style.height = `${el.clientHeight * 0.7}px`;
               }}
             >
               <svg 
