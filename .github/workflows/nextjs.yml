@@ -95,6 +95,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-NEXT_PUBLIC_USER_ID:  ${{secrets.NEXT_PUBLIC_USER_ID}}
-      NEXT_PUBLIC_SERVICE_ID: ${{secrets.NEXT_PUBLIC_SERVICE_ID}}
-      NEXT_PUBLIC_TEMPLATE_ID: ${{secrets.NEXT_PUBLIC_TEMPLATE_ID}
