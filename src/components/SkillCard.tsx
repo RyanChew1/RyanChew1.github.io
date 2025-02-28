@@ -1,19 +1,15 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
-const { library } = require("@fortawesome/fontawesome-svg-core");
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Skill {
+  viewBox: string;
   className?: string;
   icon: string;
   title: string;
   items: string[];
 }
 
-library.add(fas);
-
-const SkillCard: React.FC<Skill> = ({ className, icon, title, items }) => {
+const SkillCard: React.FC<Skill> = ({ className, viewBox, icon, title, items }) => {
   return (
     <div className={`flex mb-8 ${className || ""}`}>
       <div className="group w-full h-[10rem] md:h-[15rem] lg:h-[20rem] perspective-1000 text-center">
@@ -22,12 +18,18 @@ const SkillCard: React.FC<Skill> = ({ className, icon, title, items }) => {
           <div className="w-full absolute inset-0 bg-green-300 opacity-[0.8] p-6 rounded-lg shadow-lg flex flex-col backface-hidden [transform:rotateY(0deg)]">
             <h3 className="text-2xl font-bold mb-2">{title}</h3>
             <div
-              className="h-full w-full flex items-center justify-center"
+              className="flex flex-col h-full w-fit self-center text-center items-center justify-center"
               ref={(el) => {
                 if (el) el.style.fontSize = `${el.clientHeight * 0.6}px`;
               }}
             >
-              <FontAwesomeIcon icon={icon} />
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox={viewBox}
+                className="w-2/3"
+              >
+                <path d={`${icon}`}/>
+              </svg>
             </div>
           </div>
 
