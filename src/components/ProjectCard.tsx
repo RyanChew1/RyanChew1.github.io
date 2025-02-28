@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
   const openGithub = (e: React.MouseEvent) => {
     e.stopPropagation(); // Stop event bubbling
-    router.push(github);
+    window.open(github);
   };
 
   return (
