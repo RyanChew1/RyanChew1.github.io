@@ -114,6 +114,13 @@ export default function Home() {
       link: "molar_mass",
       github: "https://github.com/RyanChew1/Molar-Mass-Calculator",
     },
+    {
+      title: "Hotel Booking Cancellation Predictor",
+      image: "/hotel_5.png",
+      description: "Traditional ML techniques to predict whether a customer will cancel their hotel booking",
+      link: "hotel",
+      github: "https://github.com/RyanChew1/Hotel-Booking-Cancellation-Case-Study",
+    },
   ];
 
   const skills = [
@@ -232,8 +239,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience */}
+      {/* Projects */}
       <section
+        id="projects"
+        className="min-h-screen bg-gray-300 pt-[8.5vh] px-4 py-10"
+      >
+        <h1 className="text-4xl font-bold text-center mb-12">Projects</h1>
+        <div className="max-w-4xl mx-auto">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      </section>
+
+       {/* Experience */}
+       <section
         id="experience"
         className="min-h-screen bg-gray-200 pt-[8.5vh] relative pb-5"
       >
@@ -245,19 +265,6 @@ export default function Home() {
               <ExperienceCard key={index} exp={exp} index={index} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section
-        id="projects"
-        className="min-h-screen bg-gray-300 pt-[8.5vh] px-4 py-10"
-      >
-        <h1 className="text-4xl font-bold text-center mb-12">Projects</h1>
-        <div className="max-w-4xl mx-auto">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
         </div>
       </section>
 

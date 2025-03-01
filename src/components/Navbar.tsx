@@ -8,25 +8,25 @@ const Navbar = () => {
 
   useEffect(() => {
     setPrevScrollPos(window.pageYOffset);
-    
+
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const isScrollingUp = prevScrollPos > currentScrollPos;
-      
+
       setVisible(isScrollingUp || currentScrollPos < 10);
-      
+
       setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
   return (
-    <nav 
+    <nav
       className={`w-full bg-gray-900 z-50 h-[8.5vh] sticky top-0 transition-transform duration-300 ${
-        visible ? 'translate-y-0' : '-translate-y-full'
+        visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container mx-auto px-4 h-full">
@@ -35,11 +35,11 @@ const Navbar = () => {
             <a href="/#about" className="text-white hover:text-green-500">
               About Me
             </a>
-            <a href="/#experience" className="text-white hover:text-green-500">
-              Experience
-            </a>
             <a href="/#projects" className="text-white hover:text-green-500">
               Projects
+            </a>
+            <a href="/#experience" className="text-white hover:text-green-500">
+              Experience
             </a>
             <a href="/#skills" className="text-white hover:text-green-500">
               Skills
@@ -64,19 +64,50 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col space-y-4 text-xl text-end mr-10 p-5">
-          <a href="#about" className="text-white hover:text-green-500" onClick={() => {setMenuOpen(false)}}>
+          <a
+            href="#about"
+            className="text-white hover:text-green-500"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             ABOUT ME
           </a>
-          <a href="#experience" className="text-white hover:text-green-500" onClick={() => {setMenuOpen(false)}}>
-            EXPERIENCE
-          </a>
-          <a href="#projects" className="text-white hover:text-green-500" onClick={() => {setMenuOpen(false)}}>
+          <a
+            href="#projects"
+            className="text-white hover:text-green-500"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             PROJECTS
           </a>
-          <a href="#skills" className="text-white hover:text-green-500" onClick={() => {setMenuOpen(false)}}>
+          <a
+            href="#experience"
+            className="text-white hover:text-green-500"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            EXPERIENCE
+          </a>
+
+          <a
+            href="#skills"
+            className="text-white hover:text-green-500"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             SKILLS
           </a>
-          <a href="#contact" className="text-white hover:text-green-500" onClick={() => {setMenuOpen(false)}}>
+          <a
+            href="#contact"
+            className="text-white hover:text-green-500"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             CONTACT
           </a>
         </div>
