@@ -9,15 +9,14 @@ import Head from 'next/head'
 const ProjectPage = () => {
   const router = useRouter();
 
-  const title: string = "Breast Cancer CT Scan Segmentation";
-  const description: string = "The purpose of this project is to detect breast cancer from CT scans using image segmentation. I built two models in both PyTorch and Tensorflow using UNETs of different architectures. One UNET was built in Tensorflow and Keras, the architecture contains 2 - 3x3 convolutional layers per block and uses 5 blocks on both the contracting and expanding path to get the image into a latent space with dimension 256. The model also used a batch size of 32 and trained for 10 epochs. Using BCE Dice loss the model achieved 0.9 validation accuracy. The other UNET was built in PyTorch, I experimented with many loss functions including dice, BCE dice, BCE, focal loss, and Tversky loss. I also tuned the model with hyperparameter grids to achieve higher accuracy. The optimized model ended up bringing the image to 1024 dimensions in latent space before the expanding path. The best loss function was binary cross entropy which resulted in roughly 0.4 dice loss during testing.";
+  const title: string = "Molar Mass Calculator";
+  const description: string = "A website built in vite and hosted on Vercel. Built with React, Tailwind CSS, and ShadCN components. Uses browser memory to store previous results, allowing users to easily find previous calculations. Automatically formats the chemical formula with subscripts powered by regex.";
   const images: string[] = [
-    "breast-cancer-tf.png",
-    "breast-cancer-torch.png",
-    "breast-cancer.png",
+    "molar_mass.png",
+    "molar_mass_saved.png"
   ];
-  const github: string = "https://github.com/RyanChew1/Breast-Cancer-Detection";
-  const technologies: string[] = ["Python", "Tensorflow", "PyTorch", "Keras", "UNET", "Medical Image Segmentation"];
+  const github: string = "https://github.com/RyanChew1/Molar-Mass-Calculator";
+  const technologies: string[] = ["ReactJS", "TailwindCSS", "Vercel", "Regex"];
 
   const handleBack = () => {
     router.push("/#projects");
@@ -29,6 +28,11 @@ const ProjectPage = () => {
     }
   };
 
+  const handleOpenWebsite = () => {
+    window.open("https://molar-mass-calculator-4ac2.vercel.app/", "_blank");
+
+  };
+
   return (
     <>
     <Head>
@@ -36,6 +40,7 @@ const ProjectPage = () => {
       </Head>
       <Navbar />
       <div className="container mx-auto px-4 py-6">
+
         <button
           onClick={handleBack}
           className="mb-4 text-blue-500 hover:underline"
@@ -44,12 +49,18 @@ const ProjectPage = () => {
         </button>
 
         <h1 className="text-3xl font-bold mb-4">{title}</h1>
-        <div className="mb-4">
+        <div className="mb-4 space-x-5">
           <button
             onClick={handleOpenGithub}
             className="bg-blue-500 text-white px-4 py-2 rounded"
           >
             View on GitHub
+          </button>
+          <button
+            onClick={handleOpenWebsite}
+            className="bg-blue-600 text-white px-4 py-2 rounded"
+          >
+            Try it Yourself
           </button>
         </div>
 

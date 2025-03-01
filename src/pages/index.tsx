@@ -75,7 +75,6 @@ export default function Home() {
     {
       title: "Breast Cancer Detection",
       image: "/breast-cancer.png",
-      color: "rgb(218, 16, 16)",
       description: "Deep learning model for early cancer detection",
       link: "breast_cancer",
       github: "https://github.com/RyanChew1/Breast-Cancer-Detection",
@@ -83,7 +82,6 @@ export default function Home() {
     {
       title: "Soccer Detection",
       image: "/soccer.jpg",
-      color: "rgb(17, 44, 164)",
       description: "Real-time player and ball tracking system",
       link: "soccer",
       github: "https://github.com/RyanChew1/player-detection-soccer",
@@ -91,7 +89,6 @@ export default function Home() {
     {
       title: "Road Recognition",
       image: "/driving.png",
-      color: "rgb(101, 15, 124)",
       description: "Autonomous driving vision system",
       link: "road_recognition",
       github: "https://github.com/RyanChew1/Road-Vehicle-Recognition",
@@ -99,10 +96,23 @@ export default function Home() {
     {
       title: "Coronary Calcium Segmentation",
       image: "/CAC.png",
-      color: "rgb(101, 15, 124)",
       description: "Medical imaging segmentation model",
       link: "cac",
       github: "https://github.com/RyanChew1/Chest-CT-CAC-Scores",
+    },
+    {
+      title: "Fitness Tracker and Workout Planner",
+      image: "/Rep counter.png",
+      description: "Rep tracker and workout generator",
+      link: "workout",
+      github: "https://github.com/RyanChew1/FIT.LY",
+    },
+    {
+      title: "Regex Molar Mass Calculator",
+      image: "/molar_mass.png",
+      description: "Easily obtain molar mass calculations from chemical formulas",
+      link: "molar_mass",
+      github: "https://github.com/RyanChew1/Molar-Mass-Calculator",
     },
   ];
 
@@ -230,7 +240,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center mb-12">Experience</h1>
         <div className="container mx-auto px-4">
           <div className="relative">
-            <div className="absolute left-1/2 h-full w-1 bg-green-500 transform -translate-x-1/2" />
+            <div className="absolute left-1/2 h-full w-1 bg-blue-500 transform -translate-x-1/2" />
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} exp={exp} index={index} />
             ))}

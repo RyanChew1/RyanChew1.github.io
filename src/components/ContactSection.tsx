@@ -27,7 +27,6 @@ export const ContactSection = () => {
         }
       );
 
-      // On success
       setSubmissionStatus({ type: 'success', message: 'Message sent successfully!' });
       setFormData({ name: '', email: '', message: '' }); // Clear the form
     } catch (error) {
@@ -35,10 +34,9 @@ export const ContactSection = () => {
       setSubmissionStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
     }
 
-    // Clear the status message after 5 seconds
     setTimeout(() => {
       setSubmissionStatus({ type: null, message: '' });
-    }, 5000);
+    }, 2000);
   };
 
   return (

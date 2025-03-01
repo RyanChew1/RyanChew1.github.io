@@ -35,7 +35,7 @@ const ProjectPage = () => {
       <div className="container mx-auto px-4 py-6">
         <button
           onClick={handleBack}
-          className="mb-4 text-green-500 hover:underline"
+          className="mb-4 text-blue-500 hover:underline"
         >
           <ArrowLeft strokeWidth={4} size={30} />
         </button>
@@ -44,7 +44,7 @@ const ProjectPage = () => {
         <div className="mb-4">
           <button
             onClick={handleOpenGithub}
-            className="bg-green-500 text-white px-4 py-2 rounded"
+            className="bg-blue-500 text-white px-4 py-2 rounded"
           >
             View on GitHub
           </button>

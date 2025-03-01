@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`w-full bg-gray-800 z-50 h-[8.5vh] sticky top-0 transition-transform duration-300 ${
+      className={`w-full bg-gray-900 z-50 h-[8.5vh] sticky top-0 transition-transform duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`h-screen bg-gray-800 opacity-90 ${
+        className={`h-screen bg-gray-900 opacity-90 ${
           !menuOpen ? "hidden" : "block"
         }`}
       >

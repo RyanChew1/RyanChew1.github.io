@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
 
           {/* Button aligned to right on small screens */}
           <button
-            className="w-fit mt-0 md:mt-8 bg-green-500 px-5 py-2 rounded-xl font-semibold self-end md:self-start"
+            className="w-fit mt-0 md:mt-8 bg-blue-300 px-5 py-2 rounded-xl font-semibold self-end md:self-start"
             onClick={openGithub}
           >
             OPEN IN GITHUB

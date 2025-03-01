@@ -19,7 +19,7 @@ const ExperienceCard: React.FC<{ exp: Experience; index: number }> = ({ exp, ind
       <div className="group w-full md:w-5/12 h-[16rem] md:h-[20rem] lg:h-[16rem] perspective">
         <div className="relative h-full w-full transition-all duration-500 ease-in-out transform-style-preserve-3d group-hover:[transform:rotateY(180deg)]">
           {/* Front Side */}
-          <div className="absolute inset-0 bg-green-300 p-6 rounded-lg shadow-lg flex flex-col backface-hidden [transform:rotateY(0deg)]">
+          <div className="absolute inset-0 bg-blue-300 p-6 rounded-lg shadow-lg flex flex-col backface-hidden [transform:rotateY(0deg)]">
             <h1 className="text-2xl font-extrabold mb-2">{exp.company}</h1>
             <h3 className="text-lg font-semibold mb-2">{exp.title}</h3>
             <p className="text-gray-600 mb-4">{exp.date}</p>
@@ -27,7 +27,7 @@ const ExperienceCard: React.FC<{ exp: Experience; index: number }> = ({ exp, ind
           </div>
 
           {/* Back Side */}
-          <div className="absolute inset-0 bg-green-500 text-white p-6 rounded-lg shadow-lg flex flex-col backface-hidden [transform:rotateY(180deg)]">
+          <div className="absolute inset-0 bg-blue-400 text-white p-6 rounded-lg shadow-lg flex flex-col backface-hidden [transform:rotateY(180deg)]">
             <h3 className="text-xl font-bold mb-4">{exp.title}</h3>
             <p className="flex-1 overflow-y-auto">{exp.details}</p>
           </div>

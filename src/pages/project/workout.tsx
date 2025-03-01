@@ -9,15 +9,15 @@ import Head from 'next/head'
 const ProjectPage = () => {
   const router = useRouter();
 
-  const title: string = "Breast Cancer CT Scan Segmentation";
-  const description: string = "The purpose of this project is to detect breast cancer from CT scans using image segmentation. I built two models in both PyTorch and Tensorflow using UNETs of different architectures. One UNET was built in Tensorflow and Keras, the architecture contains 2 - 3x3 convolutional layers per block and uses 5 blocks on both the contracting and expanding path to get the image into a latent space with dimension 256. The model also used a batch size of 32 and trained for 10 epochs. Using BCE Dice loss the model achieved 0.9 validation accuracy. The other UNET was built in PyTorch, I experimented with many loss functions including dice, BCE dice, BCE, focal loss, and Tversky loss. I also tuned the model with hyperparameter grids to achieve higher accuracy. The optimized model ended up bringing the image to 1024 dimensions in latent space before the expanding path. The best loss function was binary cross entropy which resulted in roughly 0.4 dice loss during testing.";
+  const title: string = "Workout Rep Counter and Workout Plan Generator";
+  const description: string = "I built an AI-powered fitness app with two main features: a rep tracker and a workout generator. The rep tracker uses movement and pose detection to count reps while ensuring proper form. The workout generator creates personalized seven-day workout plans based on user-inputted goals and preferences. The app is built entirely with Streamlit and Python. The rep tracker leverages a YOLOv8Pose model, using keypoint angles to detect proper form and filter out incorrect reps. The workout generator is powered by a fine-tuned GEMMA 2B model, trained on scraped workout data to generate customized plans.";
   const images: string[] = [
-    "breast-cancer-tf.png",
-    "breast-cancer-torch.png",
-    "breast-cancer.png",
+    "Generated Workout.png",
+    "Rep Counter.png",
+    "Workout Generator.png",
   ];
-  const github: string = "https://github.com/RyanChew1/Breast-Cancer-Detection";
-  const technologies: string[] = ["Python", "Tensorflow", "PyTorch", "Keras", "UNET", "Medical Image Segmentation"];
+  const github: string = "https://github.com/RyanChew1/FIT.LY";
+  const technologies: string[] = ["Python", "PyTorch", "Open-CV", "UNET", "Gemma", "Keypoint Detection", "NLP Fine Tuning", "Prompting Methods", "YOLO", "Streamlit", "LORA"];
 
   const handleBack = () => {
     router.push("/#projects");
