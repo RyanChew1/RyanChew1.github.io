@@ -102,7 +102,7 @@ export default function Home() {
     },
     {
       title: "Fitness Tracker and Workout Planner",
-      image: "/Rep counter.png",
+      image: "Rep Counter.png",
       description: "Rep tracker and workout generator",
       link: "workout",
       github: "https://github.com/RyanChew1/FIT.LY",
